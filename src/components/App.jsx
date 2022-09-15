@@ -49,19 +49,14 @@ export function App() {
   const handleOpenModal = value => {
     setShowModal(true);
     setCurrentItem(value);
-    window.addEventListener('keydown', handleKeyDown);
+  
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    window.removeEventListener('keydown', handleKeyDown);
   };
-
-  const handleKeyDown = event => {
-    if (event.code === 'Escape') {
-      handleCloseModal();
-    }
-  };
+  
+  
 
   const isAllImg = allImg.length;
   return (
